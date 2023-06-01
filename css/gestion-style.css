@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#e0ffff, #fafad2, #86ffff);
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #162938;
+    user-select: none;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.content-container {
+  position: relative; 
+}
+
+
+.icon {
+    position: relative;
+    display: inline-block;
+    margin-left: 140px;
+    margin-right: 140px;
+
+}
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #162938;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    transition: opacity 0.2s, visibility 0.2s;
+    width: auto;
+    display: inline-block; /* Ajusta el ancho al contenido */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    margin: 0;
+}
+
+.icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(#c2e59c,#4099e2);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 3em;
+}
+
+
+button:hover {
+    background:rgb(8, 131, 179);
+}
+
+button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/*Tabla de chips*/
+#table-container {
+  position: absolute;
+  opacity: 0;
+  z-index: 0; 
+  right: 10px; 
+
+}
+  #table-container.show{
+    opacity: 1;
+    position: relative;
+  }
+  
+  
+  #table-container table{
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#c2e59c,#4099e2);
+    color: white;
+    table-layout: fixed;
+    border-collapse: collapse;
+    display: block;
+    overflow: scroll unset; 
+  }
+  
+  
+  thead{
+    background: #162938;
+  }
+  
+  th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+
+  }
+  td{
+    padding: 15px;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    border: 1px solid #162938;
+  }
+  tbody tr{
+    cursor: pointer;
+    
+  }
+  tbody tr:hover {
+    background: rgb(8, 131, 179);
+  }
+
+  #ocultar-table-btn {
+    
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #162938;
+    display: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #ocultar-table-btn:hover {
+    background: linear-gradient(#c2e59c,#4099e2);
+    color: black;
+    border-bottom: none;
+    border: 2px solid #162938;
+
+  }
+
+  #ocultar-table-btn span:hover {
+    color: #000000;
+}

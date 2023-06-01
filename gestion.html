@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gestion-style.css">
+    <script src="js/gestion.js"></script>
+    <title>Gestion</title>
+</head>
+<header>
+    <h2 class="logo"><span>
+        <ion-icon name="medkit-outline"></ion-icon>
+        </span>FarmaChip</h2></header>
+<body class="gestionBody">
+    <div class="container-buttons">
+        <div class="icon alta">
+            <div class="tooltip">Alta</div>
+            <button id="one" type="button" onclick="irAlta()"><span><ion-icon name="add-circle-outline"></ion-icon></span></button>
+        </div>
+
+        <div class="icon tabla">
+            <div class="tooltip">Tabla Altas</div>
+            <button id="two" type="button" onclick="verTabla()"><span><ion-icon name="reader-outline"></ion-icon></span></button>
+
+        </div>
+        
+        <div class="icon logOut">
+            <div class="tooltip">LogOut</div>
+            <button id="three" type="button" onclick="irLogin()"><span><ion-icon name="log-out-outline"></ion-icon></span></button>
+        </div>
+      </div>
+      
+      <div id="table-container"></div>
+
+            <button id="ocultar-table-btn" class="ocultar-button" onclick="ocultarTabla()">
+                <span><ion-icon name="close-outline"></ion-icon></span>
+            </button>
+    </div>
+      
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

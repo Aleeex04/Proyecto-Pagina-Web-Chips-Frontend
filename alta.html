@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/alta-style.css">
+    <script src="js/alta.js"></script>
+    <title>Alta</title>
+</head>
+<header>
+    <h2 class="logo"><span>
+        <ion-icon name="medkit-outline"></ion-icon>
+        </span>FarmaChip</h2></header>
+<body class="altaBody">
+   
+    <span class="icono-cerrar"onclick="limpiarCampos()">
+        <ion-icon name="trash-outline"></ion-icon>          
+      </span>
+
+<div class="envoltorio">
+    
+    <div class="form-box">
+        <h2>Dar de Alta</h2>
+        
+        <div class="input-box">
+            
+                        <span class="icon">
+                            <ion-icon name="hardware-chip-outline"></ion-icon>
+                        </span>
+            <input type="text" name="idXip" id="idXip" required>
+            <label for="idXip">ID del chip</label>
+
+        <div class="input-box">
+            <input type="date" name="fecha" id="fecha">
+            <label>Fecha</label>
+        </div>
+
+        <div class="select-box">
+            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon>
+            </span>
+            <label for="paciente"> Paciente:</label>
+            <select name="paciente" id="paciente" required>
+                <option disabled selected value=""></option>
+                
+
+            </select>
+        </div>
+    
+        <div class="select-box">
+            <span class="icon"><ion-icon name="fitness-outline"></ion-icon></span>
+            <label for="medicamento"> Medicamento: </label>
+            <select name="medicamento" id="medicamento" required>
+                
+
+            </select>
+        </div>
+        
+        <div class="enviar-boton">
+            <button type="submit" class="boton" onclick="enviar()">Enviar</button>
+        </div>
+        <div class="gestion-boton">
+            <button class="boton" onclick="irAGestion()">Ir a Gestión</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+      
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+

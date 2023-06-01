@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#e0ffff, #fafad2, #86ffff);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #162938;
+    user-select: none;
+}
+
+.envoltorio {
+    position: relative;
+    width: 400px;
+    height: 620px;
+    background: linear-gradient(#4099e2, #c2e59c);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0,0,0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: showEnvelope 1s ease forwards;
+
+}
+
+@keyframes showEnvelope {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.envoltorio .form-box{
+    padding: 40px;
+    height: 660px;
+    width: 550px;
+}
+
+
+.icono-cerrar{
+    position: relative;
+    bottom: 0px;
+    top: 288px;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#72875d,#11548b);
+    font-size: 1.5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: showEnvelope 4s ease forwards;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+}
+@keyframes showEnvelope {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+.icono-cerrar:hover{
+background: linear-gradient(#c2e59c,#4099e2);
+   border: solid 2px black;
+   border-right: none;
+   color: #000000;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid white;
+    margin:30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0 38px 0 5px;
+}
+
+
+
+.input-box .icon{
+    position: absolute;
+    right:1px;
+    bottom: 6px;
+    font-size: 1.3em;
+    color: #000000;
+    line-height: 47px;
+}
+
+.input-box input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    font-size: 1.2em;
+}
+
+
+.select-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 50px;
+    border-bottom: 2px solid #0f4975;
+    
+    }
+
+.select-box label {
+    font-size: 1em;
+    color: #0f4975;
+    font-weight: 500;
+}
+
+
+.select-box select[name="paciente"] {
+    width: auto;
+    position: absolute;
+    margin-left: 82px;
+    font-size: 0.9em;
+    color: #0f4975;
+    cursor: pointer;
+}
+
+.select-box select {
+    width: auto;
+    position: absolute;
+    margin-left: 125px;
+    font-size: 0.9em;
+    color: #0f4975;
+    cursor: pointer;
+}
+
+
+.select-box .icon{
+    position: absolute;
+    right:1px;
+    font-size: 1.3em;
+    color: #000000;
+}
+
+
+.enviar-boton .boton{
+    width: 100%;
+    height: 45px;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    background: #2b71a7;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: black;
+    font-weight: 500;
+}
+
+.enviar-boton .boton:hover{
+    width: 100%;
+    height: 45px;
+    background: #4099e2;
+    border: solid 3px black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500;
+}
+
+.gestion-boton .boton{
+    width: 100%;
+    height: 45px;
+    background: #0f4975;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+
+.gestion-boton .boton:hover{
+    width: 100%;
+    height: 45px;
+    background: #0f4975;
+    border: solid 2px black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500;
+}

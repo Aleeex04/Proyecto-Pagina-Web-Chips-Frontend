@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmaChip</title>
+  <link rel="stylesheet" href="css/login-style.css">
+</head>
+<body>
+<header>
+  <h2 class="logo"><span>
+            <ion-icon name="medkit-outline"></ion-icon>
+        </span>FarmaChip</h2>
+  <nav class="navegador">
+    <a href="#">Home</a>
+    <a href="#">Sobre Nosotros</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+    <button class="botonlogin">Iniciar Sesión</button>
+  </nav>
+</header>
+<div class="texto-bienvenida">
+  <h1>Bienvenido a la página web oficial de</h1>
+  <h2>FarmaChip</h2>
+</div>
+<div class="envoltorio">
+
+        <span class="icono-cerrar">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>
+
+  <div class="form-box login">
+    <h2>Inicio de sesión</h2>
+    <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+      <input type="email" name="mail" id="email" required>
+      <label>Email</label>
+    </div>
+    <div class="input-box">
+
+              <span class="icon" id="icono-password">
+                <ion-icon name="eye-outline"></ion-icon>
+                  <ion-icon name="lock-closed"></ion-icon></span>
+                    
+      <input type="password" name="password" id="password" required>
+      <label>Contraseña</label>
+    </div>
+
+    <div class="recuerdame">
+      <label><input type="checkbox">
+        Recuerdame</label>
+      <a href="#">Necesitas ayuda?</a>
+    </div>
+    <button type="submit" class="boton" onclick="iniciarSesion()">Iniciar Sesión
+    </button>
+    <div class="login-registro"><p>No tienes cuenta? <a
+            href="#"
+            class="enlace-registro">Registrate</a></p></div>
+  </div>
+
+  <div class="form-box register">
+    <h2>Registro</h2>
+    <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-circle-outline">
+                        </ion-icon>
+                    </span>
+      <input type="text" required>
+      <label>Usuario</label>
+    </div>
+    <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+      <input type="email" required>
+      <label>Email</label>
+    </div>
+    <div class="input-box">
+        <span class="icon" id="icono-password">
+          <ion-icon name="eye-outline"></ion-icon>
+          <ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="password" id="password" required>
+          <label>Contraseña</label>
+    </div>
+
+    <div class="recuerdame">
+      <label><input type="checkbox">
+        Estoy de acuerdo con los <a href="#"><b>términos y condiciones</b></a></label>
+    </div>
+    <button type="submit" class="boton">Registrarse
+    </button>
+    <div class="login-registro"><p>Ya tienes una cuenta? <a
+            href="#"
+            class="enlace-login">Inicia sesión</a></p></div>
+  </div>
+
+</div>
+
+
+<script src="js/login.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
